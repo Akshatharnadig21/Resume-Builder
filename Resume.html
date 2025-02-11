@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section class="resume-builder">
+        <div class="container">
+            <h1>Resume Creator</h1>
+            <form class="input-field">
+                <label for="profile-pic">Upload Profile Picture</label>
+                <input type="file" id="profile-pic" accept="image/*" />
+                <img id="preview-pic" style="max-width: 150px; display: none; margin-top: 10px; border-radius: 50%;" />
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required />
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter Your Title" required />
+
+                <label for="experience">Work Experience</label>
+                <textarea id="experience" name="experience" placeholder="Describe Your Work Experience" rows="3"></textarea>
+
+                <label for="objective">Objective</label>
+                <input type="text" id="objective" name="objective" placeholder="Enter Your Objective" />
+
+                <label for="academic">Academic Details</label>
+                <textarea id="academic" name="academic" placeholder="Enter Your Academic Details" rows="3"></textarea>
+
+                <label for="skills">Skills</label>
+                <textarea id="skills" name="skills" placeholder="List Your Skills" rows="3"></textarea>
+
+                <label for="achievements">Achievements</label>
+                <textarea id="achievements" name="achievements" placeholder="List Your Achievements" rows="3"></textarea>
+
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter Your Contact Details" required />
+
+                <button type="button" onclick="generateResume()">Generate Resume</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="output container">
+        <div id="resume-output"></div>
+    </section>
+
+    <button onclick="hideResume()">Hide Resume</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
